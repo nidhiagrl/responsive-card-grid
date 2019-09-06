@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { faTimes, faPencilAlt } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'card',
@@ -7,6 +8,8 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class CardComponent implements OnInit {
    @Input() cardData :any;
+   closeIcon = faTimes;
+   editIcon = faPencilAlt;
   constructor() { }
 
   ngOnInit() {

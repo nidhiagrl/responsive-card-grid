@@ -1,8 +1,21 @@
-<div class="card">
+  
+   
+  <div class="card">
+     <a href={{cardData.image_url}} target="_blank">
+        <div class="content-overlay"> 
+         <a>
+									<fa-icon [icon]="closeIcon" [styles]="{'color': 'white'}" pull="right"></fa-icon>
+								</a>
+                  <a>
+									<fa-icon [icon]="editIcon" [styles]="{'color': 'white'}" pull="center"></fa-icon>
+								</a>
+        </div>
 	<div class="card_title">
 		<h3>{{cardData.name}}</h3>
 	</div>
 	<div class="card_image">
 		<img src={{cardData.image_url}}>
   </div>
+   </a>
   </div>
+ 

@@ -3,7 +3,7 @@ p {
 }
 
 .main{
-  max-width: 1200px;
+  max-width: 1300px;
   margin: 0 auto;
 }
 h1{
@@ -20,6 +20,7 @@ h1{
 .cards_item {
   display: flex;
   padding: 1rem;
+  height: auto;
 }
 
 @media (min-width: 40rem) {
@@ -30,6 +31,6 @@ h1{
 
 @media (min-width: 56rem) {
   .cards_item {
-    width: 33.3333%;
+    width: 30.3333%;
   }
 }
