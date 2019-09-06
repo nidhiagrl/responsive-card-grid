@@ -3,7 +3,7 @@ a{
 }
 
 .card{
-  background: linear-gradient(to left, grey 40%, azure 100%);
+  background: linear-gradient(to left, #C09F80 0%, #565656 100%);
   display: flex;
   flex-direction: column;
   position:relative;
@@ -17,7 +17,7 @@ img {
 
 .card_title{
   text-align: center;
-   color: black;
+   color:#76323F;
 }
 
 .card .content-overlay {
@@ -39,11 +39,11 @@ img {
   opacity: 1;
 }
 
-.content-overlay h3{
-  text-align: right;
-  color:#fff;
-  
-}
 .close_icon {
   margin: 10px;
+}
+.edit_icon {
+ position: absolute;
+ top: 40%;
+ left: 40%;
 }

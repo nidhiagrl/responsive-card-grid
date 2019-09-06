@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { faTimes, faPencilAlt } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
@@ -8,11 +8,17 @@ import { faTimes, faPencilAlt } from '@fortawesome/free-solid-svg-icons';
 })
 export class CardComponent implements OnInit {
    @Input() cardData :any;
+   @Output() private toBeDeletedItem = new EventEmitter<any>();
    closeIcon = faTimes;
    editIcon = faPencilAlt;
   constructor() { }
 
   ngOnInit() {
+  }
+
+  public deleteItem(item) {
+     console.log(item);
+    this.toBeDeletedItem.emit(item);
   }
 
 }

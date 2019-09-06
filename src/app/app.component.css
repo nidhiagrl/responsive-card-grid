@@ -5,8 +5,10 @@ p {
 .main{
   max-width: 1300px;
   margin: 0 auto;
+  
 }
 h1{
+  color: #76323F;
   text-align: center;
 }
 .cards {
