@@ -2,7 +2,7 @@
   <h1>Responsive Card Grid Layout</h1>
   <div class="cards">
   <div *ngFor = "let card of imgSrcData" class="cards_item">
- <card [cardData]="card" (toBeDeletedItem)="deleteData($event)"></card>
+ <card [cardData]="card" (selectedItem)="performOperation($event)"></card>
     </div>
   </div>
 </div>

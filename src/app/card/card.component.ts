@@ -8,7 +8,7 @@ import { faTimes, faPencilAlt } from '@fortawesome/free-solid-svg-icons';
 })
 export class CardComponent implements OnInit {
    @Input() cardData :any;
-   @Output() private toBeDeletedItem = new EventEmitter<any>();
+   @Output() private selectedItem = new EventEmitter<any>();
    closeIcon = faTimes;
    editIcon = faPencilAlt;
   constructor() { }
@@ -17,8 +17,16 @@ export class CardComponent implements OnInit {
   }
 
   public deleteItem(item) {
-     console.log(item);
-    this.toBeDeletedItem.emit(item);
+    //  console.log(item);
+    this.selectedItem.emit({item, 'operation' :'delete'});
   }
+
+  public modifyItem(item){
+    // console.log(item);
+    this.selectedItem.emit({item, 'operation': 'edit'});
+  }
+
+
+ 
 
 }
