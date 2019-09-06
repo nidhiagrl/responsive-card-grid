@@ -7,7 +7,7 @@
 				</a>
 			</div>
 			<div class="edit_icon">
-				<a (click)="modifyItem(cardData)">
+				<a (click)="openModal('custom-modal-1')">
 					<fa-icon [icon]="editIcon" [styles]="{'color': 'white'}" size="3x"></fa-icon>
 				</a>
 			</div>
@@ -20,3 +20,11 @@
   </div>
    </a>
   </div>
+
+  <modal id="custom-modal-1">
+     <div class="modal-content">
+    <h5>Edit Image</h5>
+    <p>Home page text: <input type="text" [(ngModel)]="newImgLink" /></p>
+    <button (click)="closeModal('custom-modal-1');">Close</button>
+    </div>
+</modal>

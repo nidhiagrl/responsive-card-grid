@@ -1,5 +1,6 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { faTimes, faPencilAlt } from '@fortawesome/free-solid-svg-icons';
+import { ModalService } from '../modal/modal.service';
 
 @Component({
   selector: 'card',
@@ -11,9 +12,11 @@ export class CardComponent implements OnInit {
    @Output() private selectedItem = new EventEmitter<any>();
    closeIcon = faTimes;
    editIcon = faPencilAlt;
-  constructor() { }
+   newImgLink : string;
+  constructor(private modalService: ModalService) { }
 
   ngOnInit() {
+    this.newImgLink = '';
   }
 
   public deleteItem(item) {
@@ -25,7 +28,14 @@ export class CardComponent implements OnInit {
     // console.log(item);
     this.selectedItem.emit({item, 'operation': 'edit'});
   }
+ 
+ openModal(id: string) {
+        this.modalService.open(id);
+    }
 
+    closeModal(id: string) {
+        this.modalService.close(id);
+    }
 
  
 
