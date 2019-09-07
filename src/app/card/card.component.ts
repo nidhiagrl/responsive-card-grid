@@ -39,6 +39,7 @@ export class CardComponent implements OnInit {
 
     closeModal(id: string) {
         this.modalService.close(id);
+        this.newImgLink='';
     }
 
  
