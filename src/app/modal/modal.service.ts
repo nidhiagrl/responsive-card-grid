@@ -7,7 +7,6 @@ export class ModalService {
 
     add(modal: any) {
         this.modals.push(modal);
-        //console.log(this.modals);
     }
 
     remove(id: string) {
