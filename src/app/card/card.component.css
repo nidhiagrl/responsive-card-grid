@@ -9,7 +9,7 @@ a{
   position:relative;
 }
 
-img {
+ img {
   height: 300px;
   width: 400px;
   max-width: 100%;
@@ -57,4 +57,13 @@ img {
 .column {
   flex: 50%;
   padding: 10px;
+}
+
+.row img{
+  height: 150px;
+  width: 200px;
+}
+
+.row input{
+  width:200px;
 }

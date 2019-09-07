@@ -46,7 +46,7 @@
           </div>
          
    <p>New Image link: <input type="link" [(ngModel)]="newImgLink" /></p>
-   <button (click)="modifyItem(this.child.val)">Confirm Image</button>
+   <button (click)="modifyItem(this.child.val);closeModal('custom-modal-1');">Confirm Image</button>
       </div>
     </div>
     </div>

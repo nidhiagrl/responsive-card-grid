@@ -16,7 +16,6 @@ export class CardComponent implements OnInit {
    closeIcon = faTimes;
    editIcon = faPencilAlt;
    newImgLink : string;
-   imgLink:string;
   constructor(private modalService: ModalService) { }
 
   ngOnInit() {
@@ -27,9 +26,10 @@ export class CardComponent implements OnInit {
     this.selectedItem.emit({item, 'operation' :'delete'});
   }
 
-  public modifyItem(item){
-     console.log("Call"+item);
-    this.selectedItem.emit({item, 'operation': 'edit'});
+  public modifyItem(url){
+     let item = { 'image_url' : url};
+     //console.log('Try '+this.newImgLink);
+    this.selectedItem.emit({ item, 'newValue': this.newImgLink, 'operation': 'edit'});
   }
  
  openModal(id: string, obj) {
