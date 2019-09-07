@@ -1,6 +1,6 @@
 import { Component, OnInit, Input, Output, EventEmitter, ViewChild } from '@angular/core';
 import { faTimes, faPencilAlt } from '@fortawesome/free-solid-svg-icons';
-import { ModalService, ModalModule } from '../modal';
+import { ModalService } from '../modal';
 import { ModalComponent} from '../modal/modal.component'
 
 
