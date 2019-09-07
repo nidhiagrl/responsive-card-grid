@@ -18,13 +18,12 @@ export class AppComponent implements OnInit {
   }
 
   public performOperation(obj) {
-   
+    this.value = obj.item;
+    let pos = this.imgSrcData.map(function (obj) { return obj.image_url }).indexOf(this.value.image_url);
     if (obj.operation == 'delete') {
-      this.value = obj.item;
-      let pos = this.imgSrcData.map(function (obj) { return obj.image_url }).indexOf(this.value.image_url);
       this.imgSrcData.splice(pos, 1);
     }
-    if(obj.operation == 'edit'){
+    if (obj.operation == 'edit') {
       console.log(obj.item);
     }
 

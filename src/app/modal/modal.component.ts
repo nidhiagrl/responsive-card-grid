@@ -10,6 +10,7 @@ import { ModalService } from './modal.service';
 export class ModalComponent implements OnInit, OnDestroy {
   @Input() id: string;
   private element: any;
+  public val;
   constructor(private modalService: ModalService, private el: ElementRef) {
         this.element = el.nativeElement;
     }
@@ -39,9 +40,11 @@ export class ModalComponent implements OnInit, OnDestroy {
         this.element.remove();
   }
 
-  open(): void {
+  open(obj): void {
         this.element.style.display = 'block';
         document.body.classList.add('modal-open');
+        this.val = obj;
+        console.log("Here"+this.val);
     }
 
     
